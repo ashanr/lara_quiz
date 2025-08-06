@@ -62,7 +62,13 @@ This is a stable Laravel 12 application with Redis integration for caching, sess
 
 ### Option 2: Docker Development
 
-1. **Build and start services:**
+1. **Copy environment file:**
+   ```bash
+   cp .env.sample .env
+   php artisan key:generate
+   ```
+
+2. **Build and start services:**
    ```bash
    docker-compose up -d
    ```
@@ -73,7 +79,7 @@ This is a stable Laravel 12 application with Redis integration for caching, sess
    docker-compose exec app npm install && npm run build
    ```
 
-3. **Run migrations:**
+4. **Run migrations:**
    ```bash
    docker-compose exec app php artisan migrate
    ```
